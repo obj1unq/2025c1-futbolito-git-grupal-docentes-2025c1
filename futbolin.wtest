@@ -1,0 +1,14 @@
+import objetos.*
+
+describe "test de futbol" {
+    method initialize() {
+        game.width(15)
+	    game.height(10)
+    }
+    
+    test "inicio" {
+        assert.notEquals(game.at(0,5), pelota.position())
+        pelota.inicio()
+        assert.equals(game.at(0,5), pelota.position())
+    }
+}
