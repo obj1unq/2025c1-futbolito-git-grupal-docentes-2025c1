@@ -4,7 +4,8 @@ import wollok.game.*
 object lionel {
 	
 	var property position = game.at(3,5)
-	
+	var property bocha = pelota
+
 	method image() {
 		return "lionel-titular.png"
 	}
@@ -15,6 +16,9 @@ object lionel {
 	
 	method avanzar() {
 		position = game.at((game.width() - 1).min(position.x() + 1), position.y()) 
+	}
+	method buscarla() {
+		position = bocha.position()
 	}
 	
 }
