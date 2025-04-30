@@ -11,4 +11,10 @@ describe "test de futbol" {
         pelota.irAlInicio()
         assert.equals(game.at(0,5), pelota.position())
     }
+
+    test "buscarla" {
+        assert.notEquals(lionel.position(), pelota.position())
+        lionel.buscarla()
+        assert.equals(lionel.position(), pelota.position())
+    }
 }
